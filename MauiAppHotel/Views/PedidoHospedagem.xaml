@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppHotel.Views.PedidoHospedagem"
              Title="PedidoHospedagem"
-             BackgroundColor="{StaticResource OffBlack}">
+             BackgroundColor="{StaticResource OffBlack}"
+             NavigationPage.HasNavigationBar="False">
 
     <ScrollView>
     
