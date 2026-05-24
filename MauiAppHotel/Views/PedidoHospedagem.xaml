@@ -57,7 +57,8 @@
                         <Label Text="Período de Estadia" HorizontalOptions="Center" Padding="5"/>
                         <HorizontalStackLayout>
                             <Label Text="Check-in:" Padding="10"/>
-                            <DatePicker x:Name="dt_checkin" Format="dd/MM/yyyy"/>
+                            <DatePicker x:Name="dt_checkin" Format="dd/MM/yyyy"
+                                        DateSelected="dt_checkin_DateSelected"/>
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout>

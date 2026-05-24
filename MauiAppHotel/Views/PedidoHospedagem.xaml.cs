@@ -30,4 +30,15 @@ public partial class PedidoHospedagem : ContentPage
 
         Navigation.PushAsync(new HospedagemContratada());
     }
+
+    private void dt_checkin_DateSelected(object sender, DateChangedEventArgs e)
+    {
+        DatePicker elemento = sender as DatePicker;
+
+        DateTime? checkin_dataselecionada = elemento.Date;
+
+        dt_checkout.MinimumDate = checkin_dataselecionada.Value.AddDays(1);
+        dt_checkout.MaximumDate = checkin_dataselecionada.Value.AddMonths(6);
+    }
+    
 }
