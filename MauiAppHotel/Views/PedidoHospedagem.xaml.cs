@@ -1,5 +1,7 @@
 namespace MauiAppHotel.Views;
 
+using System;
+
 public partial class PedidoHospedagem : ContentPage
 {
     App PropriedadesApp;
@@ -14,7 +16,8 @@ public partial class PedidoHospedagem : ContentPage
         dt_checkin.MinimumDate = DateTime.Now;
         dt_checkin.MaximumDate = new DateTime(DateTime.Today.Year, DateTime.Now.Month + 1, DateTime.Now.Day);
 
-        
+        dt_checkout.MinimumDate = dt_checkin.Date.Value.AddDays(1);
+        dt_checkout.MaximumDate = dt_checkin.Date.Value.AddMonths(6);
 	}
 
     private void Button_Clicked(object sender, EventArgs e)
