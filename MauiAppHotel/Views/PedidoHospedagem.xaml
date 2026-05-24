@@ -48,7 +48,7 @@
 
                 <Label Text="Escolha sua suíte"/>
 
-                <Picker x:Name="picker_quarto" Title="Escolha seu quarto" BackgroundColor="Black"/>
+                <Picker x:Name="picker_quarto" Title="Escolha seu quarto" BackgroundColor="Black" ItemDisplayBinding="{Binding Descricao}"/>
 
 
                 <Border Padding="10" Margin="10">

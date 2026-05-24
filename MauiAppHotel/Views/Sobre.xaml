@@ -6,7 +6,7 @@
              NavigationPage.HasNavigationBar="False">
     <VerticalStackLayout BackgroundColor="{StaticResource Gray500}">
         <Label 
-            Text="Desenvolvido por Lucas"
+            Text="Desenvolvido por Lucas Soares"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             Margin="20"/>
