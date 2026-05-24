@@ -8,7 +8,7 @@
 
     <ScrollView>
     
-    <VerticalStackLayout VerticalOptions="CenterAndExpand" Padding="8">
+    <VerticalStackLayout VerticalOptions="Center" Padding="8" Margin="5">
         <Label 
             Text="Cálculo da Diária"
             VerticalOptions="Center" 
@@ -69,7 +69,7 @@
                     
                 </Border>
 
-                <Button Text="Avançar" HorizontalOptions="Center"/>
+                <Button Text="Avançar" HorizontalOptions="Center" Clicked="Button_Clicked_1"/>
 
                 <Button Text="Sobre" HorizontalOptions="Center"  TextColor="White" Background="Transparent" Clicked="Button_Clicked"/>
 
