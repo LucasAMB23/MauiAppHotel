@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MauiAppHotel.Models
+﻿namespace MauiAppHotel.Models
 {
     public class Hospedagem
     {
         public Quarto QuartoSelecionado { get; set; }
         public int QntdAdultos { get; set; }
         public int QntCriancas { get; set; }
-        public DateTime DataCheckIn { get; set; }
-        public DateTime DataCheckOut { get; set; }
+        public DateTime? DataCheckIn { get; set; }
+        public DateTime? DataCheckOut { get; set; }
         public int Estadia
         {
-            get => DataCheckOut.Subtract(DataCheckIn).Days;
+            get => DataCheckOut.Value.Subtract(DataCheckIn.Value).Days;
         }
         public double ValorTotal
         {

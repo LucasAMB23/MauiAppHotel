@@ -1,5 +1,6 @@
 namespace MauiAppHotel.Views;
 
+using MauiAppHotel.Models;
 using System;
 
 public partial class PedidoHospedagem : ContentPage
@@ -20,15 +21,39 @@ public partial class PedidoHospedagem : ContentPage
         dt_checkout.MaximumDate = dt_checkin.Date.Value.AddMonths(6);
 	}
 
-    private void Button_Clicked(object sender, EventArgs e)
+    private void Button_Clicked(object sender, EventArgs e) // navegação página Sobre
     {
 		 Navigation.PushAsync(new Views.Sobre());
     }
 
-    private void Button_Clicked_1(object sender, EventArgs e)
+    private async void Button_Clicked_1(object sender, EventArgs e) // armazena contexto hospedagem e navega p/ page HospedagemContratada
     {
 
-        Navigation.PushAsync(new HospedagemContratada());
+        try
+        {
+            Hospedagem h = new Hospedagem
+            {
+                QuartoSelecionado = (Quarto)picker_quarto.SelectedItem,
+                QntdAdultos = Convert.ToInt32(stp_adultos.Value),
+                QntCriancas = Convert.ToInt32(stp_criancas.Value),
+                DataCheckIn = dt_checkin.Date,
+                DataCheckOut = dt_checkout.Date
+            };
+
+            await Navigation.PushAsync(new HospedagemContratada()
+            {
+                BindingContext = h
+            });
+
+        } catch (Exception ex)
+        {
+
+           await DisplayAlertAsync("Ops", ex.Message, "OK");
+        }
+
+
+
+        
     }
 
     private void dt_checkin_DateSelected(object sender, DateChangedEventArgs e)
