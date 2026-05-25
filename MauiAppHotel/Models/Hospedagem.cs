@@ -16,10 +16,10 @@
             get
 
             {
-                double valor_adultos = QntdAdultos * QuartoSelecionado.ValorDiariaAdulto;
-                double valor_criancas = QntCriancas * QuartoSelecionado.ValorDiariaCrianca;
-                double total = (valor_adultos + valor_criancas) * Estadia;
-                return total;
+                    double valor_adultos = QntdAdultos * QuartoSelecionado.ValorDiariaAdulto;
+                    double valor_criancas = QntCriancas * QuartoSelecionado.ValorDiariaCrianca;
+                    double total = (valor_adultos + valor_criancas) * Estadia;
+                    return total;
 
 
 

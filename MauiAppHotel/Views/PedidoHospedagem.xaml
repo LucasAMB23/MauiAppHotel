@@ -20,7 +20,7 @@
         <Border BackgroundColor="{StaticResource Gray500}" Padding="8">
             <VerticalStackLayout Padding="5" HorizontalOptions="Center" >
                 <Grid RowDefinitions="Auto, Auto"
-                      ColumnDefinitions="*,*,2*">
+                      ColumnDefinitions="*,*,2*" Padding="5" Margin="5">
 
                     <Label Grid.Row="0" Grid.Column="0"
                            Text="Adultos:"/>
@@ -53,8 +53,8 @@
 
                 <Border Padding="10" Margin="10">
 
-                    <VerticalStackLayout HorizontalOptions="Center">
-                        <Label Text="Período de Estadia" HorizontalOptions="Center" Padding="5"/>
+                    <VerticalStackLayout HorizontalOptions="Center" Spacing="5">
+                        <Label Text="Período da Estadia" HorizontalOptions="Center" Padding="5" TextTransform="Uppercase"/>
                         <HorizontalStackLayout>
                             <Label Text="Check-in:" Padding="10"/>
                             <DatePicker x:Name="dt_checkin" Format="dd/MM/yyyy"
