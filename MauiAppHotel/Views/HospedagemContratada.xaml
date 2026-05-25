@@ -9,8 +9,8 @@
 
     <ScrollView>
         <VerticalStackLayout>
-
-            <Label Text="Suíte Um"
+            
+            <Label Text="Suíte Luxo" x:Name="label_suite"
                    HorizontalOptions="Center"
                    Margin="20"
                    FontFamily="Nunito"

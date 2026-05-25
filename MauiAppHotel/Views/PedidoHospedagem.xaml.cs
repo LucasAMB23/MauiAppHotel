@@ -40,5 +40,5 @@ public partial class PedidoHospedagem : ContentPage
         dt_checkout.MinimumDate = checkin_dataselecionada.Value.AddDays(1);
         dt_checkout.MaximumDate = checkin_dataselecionada.Value.AddMonths(6);
     }
-    
+
 }
